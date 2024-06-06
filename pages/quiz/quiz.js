@@ -119,7 +119,7 @@ function validarResposta() {
 
     if (pergunta === 10) {
         botaoEnviar.innerText = "Finalizar"
-        botaoEnviar.removeEventListener("click", finalizar)
+        botaoEnviar.addEventListener("click", finalizar)
     } else {
         botaoEnviar.addEventListener ("click", proximaPergunta)
     }
@@ -138,7 +138,7 @@ function validarResposta() {
 function finalizar() {
         localStorage.setItem("pontos", pontos)
 
-        window.localStorage.href = "../resultado/resultado.html"
+        window.location.href = "../resultado/resultado.html"
     }
       
 }
